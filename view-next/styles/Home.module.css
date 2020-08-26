@@ -1,74 +1,38 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .main {
-  padding: 5rem 0;
-  flex: 1;
   display: flex;
+  width: 100vw;
+  height: 100vh;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-image: linear-gradient(#163257 4%, #091728);
 }
 
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header {
+  padding: 0 16px;
+  height: 60px;
+  line-height: 60px;
+  /*background-color: #3b7dd1;*/
 }
 
-.footer img {
-  margin-left: 0.5rem;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.logo {
+  color: #EEEEEE;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  line-height: 60px;
   text-align: center;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.content {
+  flex: 1;
+  /*background: #163257;*/
 }
 
 .grid {
