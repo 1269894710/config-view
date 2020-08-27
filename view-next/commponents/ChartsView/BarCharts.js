@@ -3,7 +3,6 @@ require('echarts/lib/chart/bar')
 require('echarts/lib/component/tooltip')
 require('echarts/lib/component/title')
 import react, {useEffect} from 'react'
-// import echarts from 'echarts'
 import style from './Charts.module.css'
 
 function BarCharts(props) {

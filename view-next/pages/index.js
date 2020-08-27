@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import ConfigFlex from "../commponents/ConfigFlex/ConfigFlex";
+import ConfigFlex from "../commponents/ConfigFlex";
 
 export default function Home() {
   return (

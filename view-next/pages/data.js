@@ -9,20 +9,60 @@ export const flexData = {
       span: 8,
       items: [
         {
+          id: '1',
           flex: 4,
-          type: 'line'
+          card: {
+            cardType: 'borderCard',
+            cardHeader: {
+              title: '测试'
+            },
+            cardContent: {
+              type: 'charts',
+              chartsType: 'pictorialBar'
+            }
+          }
         },
         {
+          id: '2',
           flex: 2,
-          type: 'bar'
+          card: {
+            cardType: 'borderCard',
+            cardHeader: {
+              title: '测试1'
+            },
+            cardContent: {
+              type: 'charts',
+              chartsType: 'bar'
+            }
+          }
         },
         {
+          id: '3',
           flex: 4,
-          type: 'pie'
+          card: {
+            cardType: 'borderCard',
+            cardHeader: {
+              title: '测试2'
+            },
+            cardContent: {
+              type: 'charts',
+              chartsType: 'graphBar'
+            }
+          }
         },
         {
+          id: '4',
           flex: 2,
-          type: 'pie'
+          card: {
+            cardType: 'borderCard',
+            cardHeader: {
+              title: '测试3'
+            },
+            cardContent: {
+              type: 'charts',
+              chartsType: 'continuousBar'
+            }
+          }
         }
       ]
     },
@@ -32,12 +72,32 @@ export const flexData = {
       span: 16,
       items: [
         {
+          id: '5',
           flex: 6,
-          type: 'line'
+          card: {
+            cardType: 'borderCard',
+            cardHeader: {
+              title: '测试4'
+            },
+            cardContent: {
+              type: 'charts',
+              chartsType: 'bar'
+            }
+          }
         },
         {
+          id: '6',
           flex: 2,
-          type: 'bar'
+          card: {
+            cardType: 'borderCard',
+            cardHeader: {
+              title: '测试5'
+            },
+            cardContent: {
+              type: 'charts',
+              chartsType: 'bar'
+            }
+          }
         }
       ]
     },
@@ -47,20 +107,60 @@ export const flexData = {
       span: 10,
       items: [
         {
+          id: '7',
           flex: 4,
-          type: 'line'
+          card: {
+            cardType: 'borderCard',
+            cardHeader: {
+              title: '测试6'
+            },
+            cardContent: {
+              type: 'charts',
+              chartsType: 'bar'
+            }
+          }
         },
         {
+          id: '8',
           flex: 2,
-          type: 'bar'
+          card: {
+            cardType: 'borderCard',
+            cardHeader: {
+              title: '测试7'
+            },
+            cardContent: {
+              type: 'charts',
+              chartsType: 'bar'
+            }
+          }
         },
         {
+          id: '9',
           flex: 4,
-          type: 'bar'
+          card: {
+            cardType: 'borderCard',
+            cardHeader: {
+              title: '测试8'
+            },
+            cardContent: {
+              type: 'charts',
+              chartsType: 'bar'
+            }
+          }
         },
         {
+          id: '10',
           flex: 2,
-          type: 'bar'
+          card: {
+            cardType: 'borderCard',
+            cardHeader: {
+              title: '测试9'
+            },
+            cardContent: {
+              type: 'charts',
+              chartsType: 'bar'
+            }
+          }
         }
       ]
     }

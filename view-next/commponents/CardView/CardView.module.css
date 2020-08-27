@@ -1,0 +1,29 @@
+.cardViewContainer, .cardItem{
+  width: 100%;
+  height: 100%;
+}
+.cardItem{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.bgImg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.cardHeader{
+  padding: 0 10px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 0.8rem;
+}
+.cardTitle{
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.cardContent{
+  flex: 1;
+}
