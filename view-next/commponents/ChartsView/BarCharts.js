@@ -9,17 +9,61 @@ function BarCharts(props) {
   useEffect(() => {
     let myChart = echarts.init(document.getElementById(props.id))
     myChart.setOption({
-      title: {
-        text: 'ECharts 入门示例'
+      color: ['#4d96f3'],
+      grid: {
+        top: '8%',
+        left: '6%',
+        right: '4%',
+        bottom: '8%',
+        containLabel: true
       },
-      tooltip: {},
       xAxis: {
-        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+        data: ['衬衫', '羊毛', '雪纺', '裤子', '高跟', '袜子'],
+        axisLabel: {
+          color: '#bbb',
+          fontSize: 12
+        },
+        axisTick: {
+          show: false
+        },
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: '#bbb'
+          }
+        },
+        splitLine: {
+          lineStyle: {
+            color: '#fff',
+            type: 'dotted'
+          }
+        }
       },
-      yAxis: {},
+      yAxis: {
+        axisLabel: {
+          color: '#bbb'
+        },
+        axisTick: {
+          show: false
+        },
+        axisLine: {
+          show: false,
+            lineStyle: {
+            color: '#bbb'
+          }
+        },
+        splitLine: {
+          show: true,
+            lineStyle: {
+            color: 'rgba(238, 238, 238, .4)',
+              type: 'dotted'
+          }
+        }
+      },
       series: [{
         name: '销量',
         type: 'bar',
+        barWidth: 20,
         data: [5, 20, 36, 10, 10, 20]
       }]
     })

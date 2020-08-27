@@ -1,6 +1,6 @@
 import React from 'react'
 import ChartsView from '../ChartsView'
-import style from './SwitchView.module.css'
+// import style from './SwitchView.module.css'
 
 function SwitchView(props) {
   let temp = ''

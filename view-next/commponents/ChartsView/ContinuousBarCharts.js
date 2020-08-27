@@ -7,34 +7,37 @@ import style from './Charts.module.css'
 function BarCharts(props) {
   useEffect(() => {
     var spNum = 5,_max=100;
-    var legendData = ['常住人口', '户籍人口', '农村人口','城镇居民'];
-    var y_data = ['成都市', '绵阳市', '自贡市', '攀枝花市', '泸州市', '德阳市'];
-    var _datamax = [100,100,100,100,100,100],
-      _data1 = [10,15,10,13,15,11],
-      _data2 = [19,5,40,33,15,51],
-      _data3 = [21,55,10,13,35,11],
-      _data4 = [21,55,10,13,35,11];
-    var fomatter_fn = function(v) {
-      return (v.value / _max * 100).toFixed(0)
-    }
+    var legendData = ['常住人口', '户籍人口', '农村人口','城镇居民','外籍居民'];
+    var y_data = ['成都市'];
+    var _datamax = [100],
+      _data1 = [20],
+      _data2 = [20],
+      _data3 = [20],
+      _data4 = [20],
+      _data5= [20];
     var _label = {
       normal: {
         show: true,
-        position: 'top',
-        formatter: fomatter_fn,
+        position: ['0', '-180%'],
+        formatter: (v) => {
+          console.log(v)
+          return v.seriesName + '\n' + v.data
+        },
         textStyle: {
           color: '#fff',
-          fontSize: 16
+          align: 'left',
+          fontSize: 10
         }
       }
     };
     let myChart = echarts.init(document.getElementById(props.id))
     myChart.setOption({
+      color: ['#4d96f3', '#448652', '#9f8737', '#702d9d', '#944154'],
       grid: {
-        top: '8%',
-        left: '6%',
+        top: '18%',
+        left: '4%',
         right: '4%',
-        bottom: '8%',
+        bottom: '0',
         containLabel: true
       },
       tooltip: {
@@ -44,7 +47,7 @@ function BarCharts(props) {
         borderWidth: 1,
         textStyle: {
           color: '#3c3c3c',
-          fontSize: 16
+          fontSize: 12
         },
         formatter: function(p) {
           console.log(p);
@@ -59,11 +62,7 @@ function BarCharts(props) {
         interval: _max / spNum,
         max: _max,
         axisLabel: {
-          show: false,
-          formatter: function(v) {
-            var _v = (v / _max * 100).toFixed(0);
-            return _v == 0 ? _v : _v + '%';
-          }
+          show: false
         },
         axisLine: {
           show: false
@@ -79,8 +78,7 @@ function BarCharts(props) {
       yAxis: [{
         data: y_data,
         axisLabel: {
-          fontSize: 16,
-          color: '#fff'
+          show: false
 
         },
         axisLine: {
@@ -92,12 +90,6 @@ function BarCharts(props) {
         splitLine: {
           show: false
         }
-      }, {
-        show: false,
-        data: y_data,
-        axisLine: {
-          show: false
-        }
       }],
       series: [{
         type: 'bar',
@@ -105,13 +97,10 @@ function BarCharts(props) {
         stack: '2',
         label: _label,
         legendHoverLink: false,
-        barWidth: 40,
+        barWidth: 14,
         itemStyle: {
           normal: {
-            color: '#7E47FF'
-          },
-          emphasis: {
-            color: '#7E47FF'
+            barBorderRadius: [6, 0, 0, 0]
           }
         },
         data: _data1
@@ -120,49 +109,38 @@ function BarCharts(props) {
         name: '户籍人口',
         stack: '2',
         legendHoverLink: false,
-        barWidth: 40,
+        barWidth: 14,
         label: _label,
-        itemStyle: {
-          normal: {
-            color: '#FD5916'
-          },
-          emphasis: {
-            color: '#FD5916'
-          }
-        },
         data: _data2
       }, {
         type: 'bar',
         stack: '2',
         name: '农村人口',
         legendHoverLink: false,
-        barWidth: 40,
+        barWidth: 14,
         label: _label,
-        itemStyle: {
-          normal: {
-            color: '#01A4F7'
-          },
-          emphasis: {
-            color: '#01A4F7'
-          }
-        },
         data: _data3
       }, {
         type: 'bar',
         stack: '2',
         name: '城镇居民',
         legendHoverLink: false,
-        barWidth: 40,
+        barWidth: 14,
+        label: _label,
+        data: _data4
+      }, {
+        type: 'bar',
+        stack: '2',
+        name: '外籍居民',
+        legendHoverLink: false,
+        barWidth: 14,
         label: _label,
         itemStyle: {
           normal: {
-            color: '#2EDDCD'
-          },
-          emphasis: {
-            color: '#2EDDCD'
+            barBorderRadius: [0, 10, 10, 0]
           }
         },
-        data: _data4
+        data: _data5
       }]
     })
   })

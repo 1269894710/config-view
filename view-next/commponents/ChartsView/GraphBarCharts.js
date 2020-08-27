@@ -6,28 +6,24 @@ import style from './Charts.module.css'
 
 function GraphBarCharts(props) {
   useEffect(() => {
-    const hexToRgba = (hex, opacity) => {
-      let rgbaColor = "";
-      let reg = /^#[\da-f]{6}$/i;
-      if (reg.test(hex)) {
-        rgbaColor = `rgba(${parseInt("0x" + hex.slice(1, 3))},${parseInt(
-          "0x" + hex.slice(3, 5)
-        )},${parseInt("0x" + hex.slice(5, 7))},${opacity})`;
-      }
-      return rgbaColor;
-    };
 
 // 数据整理
-    let xData = ['类别1', '类别2', '类别3', '类别4', '类别5', '类别6', '类别7', '类别8'];
-    let yData = [4757, 3254, 2454, 2011, 1654, 1211, 1211, 254];
-    let max = Math.max(...yData);
+    let xData = ['类别1', '类别2', '类别3', '类别4', '类别5'];
+    let yData = [
+      {value: 47, data: 1234},
+      {value: 32, data: 934},
+      {value: 24, data: 734},
+      {value: 20, data: 434},
+      {value: 16, data: 234}
+    ];
+    let max = 100;
     let labelColor = ['#FD5360', '#FF962B', '#FFAA00']
     let emptyData = yData.map((v, i) => {
       let color = i > 2 ? '#1890FF' : labelColor[i];
       let item = {
         value: max,
         label: {
-          formatter: '{a|' + v + '}',
+          formatter: '{a|' + v.data + '人  '+ v.value +'%}',
           position: 'right',
           distance: 10,
           rich: {
@@ -43,17 +39,14 @@ function GraphBarCharts(props) {
       }
       return item
     })
-    let xDataFormat = xData
-    xData.reverse();
-    xDataFormat.reverse();
     yData.reverse();
     emptyData.reverse();
     let myChart = echarts.init(document.getElementById(props.id))
     myChart.setOption({
       grid: {
         top: '8%',
-        left: '0',
-        right: '24%',
+        left: '4%',
+        right: '28%',
         bottom: '8%',
         containLabel: true
       },
@@ -72,7 +65,7 @@ function GraphBarCharts(props) {
           show: false
         },
         axisLabel: {
-          color: '#bbb'
+          show: false
         }
       }],
       yAxis: [{
@@ -89,7 +82,7 @@ function GraphBarCharts(props) {
         axisLabel: {
           color: '#bbb'
         },
-        data: xDataFormat
+        data: xData
       }, {
         type: "category",
         axisTick: {
@@ -113,7 +106,7 @@ function GraphBarCharts(props) {
         itemStyle: {
           normal: {
             barBorderRadius: [0, 6, 6, 0],
-            color: 'rgba(225,225,225,0.4)'
+            color: '#303d4e'
           }
         },
         label: {
@@ -131,10 +124,10 @@ function GraphBarCharts(props) {
               barBorderRadius: [0, 6, 6, 0],
               color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
                 offset: 0,
-                color: '#3D9FFF'
+                color: '#2964b2'
               }, {
                 offset: 1,
-                color: '#41D7F3'
+                color: '#4d96f3'
               }], false)
             }
           },

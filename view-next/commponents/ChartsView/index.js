@@ -3,6 +3,9 @@ import BarCharts from './BarCharts'
 import PictorialBarCharts from './PictorialBarCharts'
 import GraphBarCharts from './GraphBarCharts'
 import ContinuousBarCharts from './ContinuousBarCharts'
+import ThreedBarCharts from './ThreedBarCharts'
+import MapCharts from './MapCharts'
+
 import style from './Charts.module.css'
 
 function ChartsView(props) {
@@ -27,6 +30,16 @@ function ChartsView(props) {
     case 'continuousBar':
       temp = (
         <ContinuousBarCharts id={props.id} />
+      )
+      break
+    case 'threedBar':
+      temp = (
+        <ThreedBarCharts id={props.id} />
+      )
+      break
+    case 'map':
+      temp = (
+        <MapCharts id={props.id} />
       )
       break
   }

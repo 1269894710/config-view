@@ -32,7 +32,7 @@ export const flexData = {
             },
             cardContent: {
               type: 'charts',
-              chartsType: 'bar'
+              chartsType: 'continuousBar'
             }
           }
         },
@@ -81,7 +81,7 @@ export const flexData = {
             },
             cardContent: {
               type: 'charts',
-              chartsType: 'bar'
+              chartsType: 'map'
             }
           }
         },
@@ -95,7 +95,7 @@ export const flexData = {
             },
             cardContent: {
               type: 'charts',
-              chartsType: 'bar'
+              chartsType: 'threedBar'
             }
           }
         }
@@ -130,7 +130,7 @@ export const flexData = {
             },
             cardContent: {
               type: 'charts',
-              chartsType: 'bar'
+              chartsType: 'continuousBar'
             }
           }
         },
@@ -158,7 +158,7 @@ export const flexData = {
             },
             cardContent: {
               type: 'charts',
-              chartsType: 'bar'
+              chartsType: 'continuousBar'
             }
           }
         }
