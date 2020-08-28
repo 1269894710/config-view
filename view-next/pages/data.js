@@ -75,10 +75,7 @@ export const flexData = {
           id: '5',
           flex: 6,
           card: {
-            cardType: 'borderCard',
-            cardHeader: {
-              title: '测试4'
-            },
+            cardType: '',
             cardContent: {
               type: 'charts',
               chartsType: 'map'

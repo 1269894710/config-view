@@ -68,7 +68,6 @@ function PictorialBarCharts(props) {
         type: 'pictorialBar',
         name: 'pictorial element',
         symbol: "path://M0,10 L10,10 C5.5,10 5.5,5 5,0 C4.5,5 4.5,10 0,10 z",
-        symbolSize: ['100%', '70%'],
         symbolPosition: 'center',
         z: 10,
         itemStyle: {

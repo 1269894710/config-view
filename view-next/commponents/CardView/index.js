@@ -32,11 +32,15 @@ function CardView(props) {
       )
       break
     default:
+      let header = ''
+      if (card.cardHeader) {
+        header = (<div className={style.cardHeader}>
+          <span className={style.cardTitle}>{card.cardHeader.title}</span>
+        </div>)
+      }
       cardItem = (
         <div className={style.cardItem}>
-          <div className={style.cardHeader}>
-            <span className={style.cardTitle}>{card.cardHeader.title}</span>
-          </div>
+          {header}
           <div className={style.cardContent}>
             <SwitchView {...props}/>
           </div>

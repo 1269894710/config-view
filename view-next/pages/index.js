@@ -12,8 +12,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.header}>
-          <div className={styles.logo}>浙江省退役军人</div>
-          <div className={styles.title}>退役军人数据驾驶舱</div>
+          <div className={styles.logo}>浙江省数据分析</div>
+          <div className={styles.title}>大数据分析平台</div>
         </div>
         <div className={styles.content}>
           <ConfigFlex />

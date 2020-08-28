@@ -20,7 +20,6 @@ function BarCharts(props) {
         show: true,
         position: ['0', '-180%'],
         formatter: (v) => {
-          console.log(v)
           return v.seriesName + '\n' + v.data
         },
         textStyle: {
